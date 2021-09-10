@@ -10,4 +10,5 @@
       ios_command:
         authorize: yes
         commands:
+          - terminal length 0
           - show run
