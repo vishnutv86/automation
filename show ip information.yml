@@ -1,0 +1,13 @@
+---
+- name: Show interface information
+  hosts: "{{ cisco_router }}"
+  connection: network_cli
+  #port: 22
+  gather_facts: no
+
+  tasks:
+    - name: Command sh ip int br
+      ios_command:
+        authorize: yes
+        commands:
+          - show ip int br

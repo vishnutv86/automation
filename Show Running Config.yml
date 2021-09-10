@@ -1,0 +1,13 @@
+---
+- name: Show Running Config 
+  hosts: "{{ cisco_router }}"
+  connection: network_cli
+  #port: 22
+  gather_facts: no
+
+  tasks:
+    - name: run ios_command on remote nodes
+      ios_command:
+        authorize: yes
+        commands:
+          - show run
